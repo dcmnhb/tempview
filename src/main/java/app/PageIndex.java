@@ -92,7 +92,7 @@ public class PageIndex implements Handler {
         // Footer
         html = html + """
             <div class='footer'>
-                <p>COSC2803 - Studio Project Starter Code (Sep23)</p>
+                <p>COSC3056 - Studio Project Starter Code (Sep23)</p>
             </div>
         """;
 
