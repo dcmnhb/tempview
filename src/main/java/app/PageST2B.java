@@ -75,7 +75,7 @@ public class PageST2B implements Handler {
         // Footer
         html = html + """
             <div class='footer'>
-                <p>COSC2803 - Studio Project Starter Code</p>
+                <p>COSC3056 - Studio Project Starter Code</p>
             </div>
         """;
 
