@@ -28,55 +28,35 @@ public class PageMission implements Handler {
     @Override
     public void handle(Context context) throws Exception {
         // Create a simple HTML webpage in a String
-        String html = "<html>";
-
-        // Add some Head information
-        html = html + "<head>" + 
-               "<title>Our Mission</title>";
-
-        // Add some CSS (external file)
-        html = html + "<link rel='stylesheet' type='text/css' href='common.css' />";
-        html = html + "</head>";
-
-        // Add the body
-        html = html + "<body>";
-
-        // Add the topnav
-        // This uses a Java v15+ Text Block
-        html = html + """
-            <div class='topnav'>
-                <a href='/'>Homepage</a>
-                <a href='mission.html'>Our Mission</a>
-                <a href='page2A.html'>Sub Task 2.A</a>
-                <a href='page2B.html'>Sub Task 2.B</a>
-                <a href='page3A.html'>Sub Task 3.A</a>
-                <a href='page3B.html'>Sub Task 3.B</a>
-            </div>
+        String html = """
+            <html>
+                <head>
+                    <title>Our Mission</title>
+                    <link rel='stylesheet' type='text/css' href='common.css' />
+                </head>
+                <body>
+                    <div class='topnav'>
+                        <a href='/'>Homepage</a>
+                        <a href='mission.html'>Our Mission</a>
+                        <a href='page2A.html'>Sub Task 2.A</a>
+                        <a href='page2B.html'>Sub Task 2.B</a>
+                        <a href='page3A.html'>Sub Task 3.A</a>
+                        <a href='page3B.html'>Sub Task 3.B</a>
+                    </div>
+                    <div class='header'>
+                        <h1>Our Mission</h1>
+                    </div>
+                    <div class='content'>
+                        <p>Mission page content</p>
+                        <h1>All 2016 LGAs in the Voice to Parliament database (using JDBC Connection)</h1>
+                        <ul>
         """;
-
-        // Add header content block
-        html = html + """
-            <div class='header'>
-                <h1>Our Mission</h1>
-            </div>
-        """;
-
-        // Add Div for page Content
-        html = html + "<div class='content'>";
-
-        // Add HTML for the page content
-        html = html + """
-            <p>Mission page content</p>
-            """;
 
         // This example uses JDBC to lookup the LGAs
         JDBCConnection jdbc = new JDBCConnection();
 
         // Next we will ask this *class* for the LGAs
         ArrayList<LGA> lgas = jdbc.getLGAs2016();
-
-        // Add HTML for the LGA list
-        html = html + "<h1>All 2016 LGAs in the Voice to Parliament database (using JDBC Connection)</h1>" + "<ul>";
 
         // Finally we can print out all of the LGAs
         for (LGA lga : lgas) {
@@ -85,22 +65,15 @@ public class PageMission implements Handler {
         }
 
         // Finish the List HTML
-        html = html + "</ul>";
-
-
-        // Close Content div
-        html = html + "</div>";
-
-        // Footer
-        html = html + """
-            <div class='footer'>
-                <p>COSC3056 - Studio Project Starter Code</p>
-            </div>
+        html += """
+                        </ul>
+                    </div>
+                    <div class='footer'>
+                        <p>COSC3056 - Studio Project Starter Code</p>
+                    </div>
+                </body>
+            </html>
         """;
-
-        // Finish the HTML webpage
-        html = html + "</body>" + "</html>";
-        
 
         // DO NOT MODIFY THIS
         // Makes Javalin render the webpage
