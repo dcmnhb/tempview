@@ -1,5 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14806120&assignment_repo_type=AssignmentRepo)
-# Studio Project Starter Code
+
+# Studio 1 Project: Historical Temperature Tracker
 Starter code for the Studio Project. This is a simple layout connected to a GitHub Classroom that serves as the basis for implementing the studio project. 
 
 This example program provides:
@@ -7,18 +8,18 @@ This example program provides:
 * A Java class for the Index page (index.html).
 * 6x Java classes for 6 pages. Additional pages can be added by adding additional classes.
 * JDBCConnection Java class, that uses the CTG Database. This class contains one method to return all LGAs contained in the Database.
-* Examples CSS (```common.css```) file in the resources directory.
-* Example image (```logo.png```) file in the resources directory with where to locate any images you want on your website
+* Examples CSS (`common.css`) file in the resources directory.
+* Example image (`logo.png`) file in the resources directory with where to locate any images you want on your website
 * Starting database:
-    * ```vtp.db``` - contains a starting database for you based on the example VtP ER Model.
-* Optional helper program (``VTPProcessCSV.java``) that shows an example of how to load the SQLite database by using Java to read the CSV files and JDBC insert statements to update the VtP SQLite database.
-* Optional helper SQL files (```vtp_create_tables.sql```) that creates two tables (```LGA``` and ```PopulationStatistics```) based on the example CTG ER Model.
+    * `vtp.db` - contains a starting database for you based on the example VtP ER Model.
+* Optional helper program (`VTPProcessCSV.java`) that shows an example of how to load the SQLite database by using Java to read the CSV files and JDBC insert statements to update the VtP SQLite database.
+* Optional helper SQL files (`vtp_create_tables.sql`) that creates two tables (`LGA` and `PopulationStatistics`) based on the example CTG ER Model.
 
 Classes backing Web pages:
 ```bash
 ├── PageIndex.java                    - Homepage page for Level 1 Sub-task A
 ├── PageMission.java                  - Mission Statement page for Level 1 Sub-task B
-├── PageST2/3.java                - Sets of 4 Java files backing the 4 pages for 4 Level2/3 sub-tasks.
+├── PageST2/3.java                    - Sets of 4 Java files backing the 4 pages for 4 Level2/3 sub-tasks.
 ```
 
 Other Classes:
@@ -96,10 +97,12 @@ This folder will not affect a *local* VSCode setup on a computer.
 
 **🚨 DO NOT MODIFY THE CONTENTS OF THIS FOLDER. 🚨**
 
-# Authors
-* COSC3056 teaching team, School of Science and Technologies, RMIT Vietnam.
-* Dr. Timothy Wiley, School of Computing Technologies, STEM College, RMIT University.
-* Prof. Santha Sumanasekara, School of Computing Technologies, STEM College, RMIT University.
+We would like to sincerely thank:
+- Dr. Timothy Wiley, School of Computing Technologies, STEM College, RMIT University,
+- Prof. Santha Sumanasekara, School of Computing Technologies, STEM College, RMIT University,
+
+for coming up with the framework for this repository, and handle JDBC and Javalin as starting points;
+
+- COSC3056 Teaching Team, lead by Dr. Phong Ngo, Dr. Minh Nguyen and Dr. Huynh Tri, School of Science and Technologies, RMIT Vietnam.
 
 Copyright RMIT University (c) 2023
-
