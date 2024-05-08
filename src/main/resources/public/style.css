@@ -33,6 +33,7 @@ body {
     color: #fff;
     display: block;
     margin: 7.5rem auto;
+    min-width: 75vw;
     max-width: 1100px;
     text-align: left;
 }
@@ -47,12 +48,12 @@ body {
 }
 
 #searchInput {
-    width: 97.25%;
-    height: 2rem;
+    width: 100%;
     padding: 1.25rem;
     font-size: 1.5rem;
     border: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
 }
 
 .filter {
@@ -68,10 +69,6 @@ body {
     display: inline;
     border: none;
     background-color: transparent;
-}
-
-.dateSelect {
-    vertical-align: right;
 }
 
 #dateSelect input {
