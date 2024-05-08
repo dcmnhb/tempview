@@ -1,6 +1,6 @@
 /---ReadMe---/
 
-This is a database data for Group Project: Climate Change.
+This is the database for Group Project: Climate Change.
 
 Feel free to use anytime you want.
 
