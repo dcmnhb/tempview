@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Climate Change Awareness</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="dwn">
+        <div class="nav">
             <a href="mission.html">About</a>
             <div id="date"></div>
         </div>
@@ -15,12 +16,29 @@
                 <p>Example page</p>
             </div>
             <div class="search">
-                <input type="text" id="searchInput" placeholder="Search for a city...">
-                <select id="searchSelect">
-                    <option value="temperature">a</option>
-                    <option value="humidity">Humidity</option>
-                    <option value="pressure">Pressure</option>
-                </select>
+                <input type="text" id="searchInput" placeholder="Search for a city or country...">
+                <div class="filter">
+                    <div class="countrySelect">
+                        <label for="countrySelect">Countries:</label>
+                        <select id="countrySelect">
+                            <option value="temperature">World</option>
+                            <option value="humidity">Country1</option>
+                            <option value="pressure">Country2</option>
+                        </select>
+                    </div>
+                    <div class="dateSelect">
+                        <label for="dateSelect">Date period:</label>
+                        <form id="dateSelect">
+                            <input type="number" id="startDate" min="1750" max="2013" step="1" value="1750">
+                            <span>—</span>
+                            <input type="number" id="endDate" min="1750" max="2013" step="1" value="2013">
+                            <span class="tooltipText">
+                                <h1 style="margin:0">Select the start and end year</h1>
+                                <p>Note that data is only available between 1750 and 2013.</p>
+                            </span>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="content">
