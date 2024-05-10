@@ -1,25 +1,43 @@
 body {
-    font-family: system-ui, sans-serif;
-    margin: 0; /* Remove default margin, which creates a white border */
+    /* Set font family for the entire page. */
+    font-family: sans-serif;
+
+    /* By default, HTML creates a white margin surrounding the <body> tag.
+       This removes it to create a full-screen experience */
+    margin: 0;
+
+    /* Set background color of the entire page.
+       Because the header has a background-image set, this should not affect header and elements on top of it */
     background-color: #a5c296;
 }
 
 .nav {
-    position: relative;
+    /* Position navigation bar at the top of the page and on top of other HTML elements */
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    /* Display navigation bar as flex container with links at one end and current date on the other */
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 2rem;
-    font-size: 18px;
-    color: #fff;
+
+    /* Create padding */
+    padding: 2rem;
+    width: calc(100% - 4rem);
+
+    font-size: large;
+    color: #fff; /* Set text color to white */
 }
 
 .nav a {
-    color: #fff;
+    /* Remove default underline from links */
+    color: inherit;
     text-decoration: none;
 }
 
 .header {
+    /* Position header at the top of the page and on top of other HTML elements */
     position: absolute;
     top: 0;
     width: 100%;
@@ -34,14 +52,13 @@ body {
     color: #fff;
     display: block;
     margin: 7.5rem auto;
-    min-width: 75vw;
     max-width: 1100px;
     text-align: left;
 }
 
-.search {
-    position: absolute;
-    top: calc(450px - 2rem);
+#search {
+    position: relative;
+    top: -35px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -60,7 +77,7 @@ body {
 .filter {
     width: 100%;
     margin-top: 1rem;
-    font-size: 80%;
+    font-size: small;
     display: flex;
     justify-content: space-between;
 }
@@ -96,11 +113,31 @@ input[type=number] {
     padding: 1rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     display: none;
+    z-index: 1;
+    background-color: #fff;
+}
+
+#dateSelect input:focus~ .tooltipText {
+    display: block;
 }
 
 .content {
-    position: absolute;
-    top: 525px;
-    color: rgb(223, 228, 231);
-    padding: 50px;
+    position: relative;
+    top: 450px;
+    /* color: rgb(223, 228, 231); */
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro img {
+    margin: 1rem;
+    width: 1000px;
+    aspect-ratio: 4 / 3;
+}
+
+.intro p {
+    font-size: x-large;
 }
