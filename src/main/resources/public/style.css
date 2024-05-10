@@ -1,6 +1,7 @@
 body {
     font-family: system-ui, sans-serif;
     margin: 0; /* Remove default margin, which creates a white border */
+    background-color:#a5c296
 }
 
 .nav {
@@ -33,7 +34,6 @@ body {
     color: #fff;
     display: block;
     margin: 7.5rem auto;
-    min-width: 75vw;
     max-width: 1100px;
     text-align: left;
 }
@@ -48,12 +48,12 @@ body {
 }
 
 #searchInput {
-    width: 100%;
+    width: 97.25%;
+    height: 2rem;
     padding: 1.25rem;
     font-size: 1.5rem;
     border: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
 }
 
 .filter {
@@ -69,6 +69,10 @@ body {
     display: inline;
     border: none;
     background-color: transparent;
+}
+
+.dateSelect {
+    vertical-align: right;
 }
 
 #dateSelect input {
@@ -98,4 +102,10 @@ input[type=number] {
 
 #dateSelect input:focus~ .tooltipText {
     display: block;
+}
+.content {
+    margin-top: 500px;
+    color: rgb(223, 228, 231)
+    padding: 50px;
+
 }
