@@ -1,6 +1,6 @@
 body {
     /* Set font family for the entire page. */
-    font-family: sans-serif;
+    font-family: "Inter", sans-serif;
 
     /* By default, HTML creates a white margin surrounding the <body> tag.
        This removes it to create a full-screen experience */
@@ -8,14 +8,15 @@ body {
 
     /* Set background color of the entire page.
        Because the header has a background-image set, this should not affect header and elements on top of it */
-    background-color: #a5c296;
+    /* background-color: #a5c296; */
 }
 
 .nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+
     /* Position navigation bar at the top of the page and on top of other HTML elements */
     position: absolute;
     top: 0;
-    z-index: 1;
 
     /* Display navigation bar as flex container with links at one end and current date on the other */
     display: flex;
@@ -36,7 +37,7 @@ body {
     text-decoration: none;
 }
 
-.header {
+#bgImg {
     /* Position header at the top of the page and on top of other HTML elements */
     position: absolute;
     top: 0;
@@ -51,18 +52,21 @@ body {
 .title {
     color: #fff;
     display: block;
-    margin: 7.5rem auto;
+    margin-top: 7rem;
+    margin-inline: auto;
+    min-height: calc(300px - 2rem);
     max-width: 1100px;
     text-align: left;
 }
 
 #search {
     position: relative;
-    top: -35px;
+    margin-top: 2rem;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    margin-inline: auto;
     width: 75vw;
+    z-index: 2;
 }
 
 #searchInput {
@@ -123,8 +127,8 @@ input[type=number] {
 
 .content {
     position: relative;
-    top: 450px;
-    /* color: rgb(223, 228, 231); */
+    /* top: 450px;
+    color: rgb(223, 228, 231); */
 }
 
 .intro {
