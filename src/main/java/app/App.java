@@ -2,6 +2,7 @@ package app;
 
 import io.javalin.Javalin;
 import io.javalin.core.util.RouteOverviewPlugin;
+import io.javalin.http.staticfiles.Location;
 
 /**
  * Main Application Class.
