@@ -8,9 +8,9 @@
     </head>
     <body>
         <div class="nav">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
         </div>
-        <div id="search">
+        <form class="search" action="/search.html" method="post">
             <input type="text" id="searchInput" placeholder="Search for a city or country...">
             <div class="filter">
                 <div class="countrySelect">
@@ -23,18 +23,16 @@
                 </div>
                 <div class="dateSelect">
                     <label for="dateSelect">Date period:</label>
-                    <form id="dateSelect">
-                        <input type="number" id="startDate" min="1750" max="2013" step="1" value="1750">
-                        <span>—</span>
-                        <input type="number" id="endDate" min="1750" max="2013" step="1" value="2013">
-                        <span class="tooltipText">
-                            <h1 style="margin:0">Select the start and end year</h1>
-                            <p>Note that data is only available between 1750 and 2013.</p>
-                        </span>
-                    </form>
+                    <input type="number" id="startDate" min="1750" max="2013" step="1" value="1750">
+                    <span>—</span>
+                    <input type="number" id="endDate" min="1750" max="2013" step="1" value="2013">
+                    <span id="tooltipText">
+                        <h1 style="margin:0">Select the start and end year</h1>
+                        <p>Note that data is only available between 1750 and 2013.</p>
+                    </span>
                 </div>
             </div>
-        </div>
+        </form>
         <div class="content">
         </div>
     </body>

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Climate Change Awareness</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="search.js" defer></script>
     </head>
     <body>
@@ -17,7 +18,7 @@
             <h1>Climate Change Awareness</h1>
             <p>Welcome to Climate Change Awareness! Explore our site for detailed statistics on global temperature trends from 1750 to 2013, at various levels from worldwide to city-specific. We also provide population data from 1960 to 2013, offering insights into demographic shifts globally and by country. Our data, derived from daily temperature observations, is aggregated to yearly averages, allowing you to easily understand trends over time. Join us in raising awareness and understanding the impact of climate change on our world.</p>
         </div>
-        <div id="search">
+        <form class="search" action="/search.html" method="post">
             <input type="text" id="searchInput" placeholder="Search for a city or country...">
             <div class="filter">
                 <div class="countrySelect">
@@ -30,18 +31,16 @@
                 </div>
                 <div class="dateSelect">
                     <label for="dateSelect">Date period:</label>
-                    <form id="dateSelect">
-                        <input type="number" id="startDate" min="1750" max="2013" step="1" value="1750">
-                        <span>—</span>
-                        <input type="number" id="endDate" min="1750" max="2013" step="1" value="2013">
-                        <span class="tooltipText">
-                            <h1 style="margin:0">Select the start and end year</h1>
-                            <p>Note that data is only available between 1750 and 2013.</p>
-                        </span>
-                    </form>
+                    <input type="number" id="startDate" min="1750" max="2013" step="1" value="1750">
+                    <span>-</span>
+                    <input type="number" id="endDate" min="1750" max="2013" step="1" value="2013">
+                    <span id="tooltipText">
+                        <h1 style="margin:0">Select the start and end year</h1>
+                        <p>Note that data is only available between 1750 and 2013.</p>
+                    </span>
                 </div>
             </div>
-        </div>
+        </form>
         <div class="content">
             <div class="intro">
                 <img src="nasa.jpg">
